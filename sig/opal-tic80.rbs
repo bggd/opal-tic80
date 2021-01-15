@@ -1,0 +1,97 @@
+class Object
+  def TIC: () { () -> void } -> void
+
+  def SCN: () { (?Numeric) -> void } -> void
+         | () { () -> void } -> void
+
+  def OVR: () { () -> void } -> void
+
+  def btn: (?Numeric id) -> bool
+
+  def btnp: (?Numeric id) -> bool
+          | (Numeric id, Numeric hold, Numeric period) -> bool
+
+  def clip: () -> void
+          | (Numeric x, Numeric y, Numeric w, Numeric h) -> void
+
+  def cls: (?Numeric color) -> void
+
+  def circ: (Numeric x, Numeric y, Numeric r, Numeric color) -> void
+
+  def circb: (Numeric x, Numeric y, Numeric r, Numeric color) -> void
+
+  def exit: () -> void
+
+  def fget: (Numeric index, Numeric flag) -> void
+
+  def font: (String text) -> void
+          | (String text, Numeric x, Numeric y, ?Numeric colorkey) -> void
+          | (String text, Numeric x, Numeric y, Numeric colorkey, Numeric char_width, Numeric char_height, ?bool fixed, ?Numeric scale) -> Numeric
+
+  def fset: (Numeric index, Numeric flag, bool value) -> void
+
+  def key: (?Numeric code) -> bool
+
+  def keyp: (?Numeric code) -> bool
+          | (Numeric code , Numeric hold, Numeric period) -> bool
+
+  def line: (Numeric x0, Numeric y0, Numeric x1, Numeric y1, Numeric color) -> void
+
+  def map: () -> void
+         | (Numeric x, Numeric y) -> void
+         | (Numeric x, Numeric y, Numeric w, Numeric h) -> void
+         | (Numeric x, Numeric y, Numeric w, Numeric h, Numeric sx, Numeric sy) -> void
+         | (Numeric x, Numeric y, Numeric w, Numeric h, Numeric sx, Numeric sy, ?Numeric | Array[Numeric] colorkey, ?Numeric scale, ?untyped remap) -> void
+
+  def memcpy: (Numeric toaddr, Numeric fromaddr, Numeric len) -> void
+
+  def memset: (Numeric addr, Numeric val, Numeric len) -> void
+
+  def mget: (Numeric x, Numeric y) -> Numeric
+
+  def mouse: () -> Array[Numeric | bool]
+
+  def mset: (Numeric x, Numeric y, Numeric id) -> void
+
+  def music: () -> void
+           | (Numeric track, ?Numeric frame, ?Numeric row, ?bool music_loop, ?bool sustain) -> void
+
+  def peek: (Numeric addr) -> Numeric
+
+  def peek4: (Numeric addr4) -> Numeric
+
+  def pix: (Numeric x, Numeric y) -> Numeric
+         | (Numeric x, Numeric y, Numeric color) -> void
+
+  def pmem: (Numeric index, ?Numeric val) -> Numeric
+
+  def poke: (Numeric addr, Numeric val) -> void
+
+  def poke4: (Numeric addr4, Numeric val) -> void
+
+  def print: (String text) -> Numeric
+           | (String text, Numeric x, Numeric y, ?Numeric color, ?bool fixed, ?Numeric scale, ?bool smallfont) -> Numeric
+
+  def rect: (Numeric x, Numeric y, Numeric w, Numeric h, Numeric color) -> void
+
+  def rectb: (Numeric x, Numeric y, Numeric w, Numeric h, Numeric color) -> void
+
+  def reset: () -> void
+
+  def sfx: (Numeric id, ?(Numeric | String) note, ?Numeric duration, ?Numeric channel, ?Numeric | Array[Numeric] volume, ?Numeric speed) -> void
+
+  def spr: (Numeric id, Numeric x, Numeric y, ?Numeric | Array[Numeric] colorkey, ?Numeric scale, ?Numeric flip, ?Numeric rotate) -> void
+         | (Numeric id, Numeric x, Numeric y, Numeric | Array[Numeric] colorkey, Numeric scale, Numeric flip, Numeric rotate, Numeric w, Numeric h) -> void
+
+  def sync: (?Numeric mask, ?Numeric bank, ?bool tocart) -> void
+
+  def time: () -> Numeric
+
+  def tstamp: () -> Numeric
+
+  def trace: (String? msg, ?Numeric color) -> void
+
+  def tri: (Numeric x1, Numeric y1, Numeric x2, Numeric y2, Numeric x3, Numeric y3, Numeric color) -> void
+
+  def textri: (Numeric x1, Numeric y1, Numeric x2, Numeric y2, Numeric x3, Numeric y3, Numeric u1, Numeric v1, Numeric u2, Numeric v2, Numeric u3, Numeric v3, ?bool use_map, ?Numeric | Array[Numeric] colorkey) -> void
+end
