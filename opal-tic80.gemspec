@@ -3,7 +3,7 @@
 Gem::Specification.new do |spec|
   spec.name          = 'opal-tic80'
   spec.version       = '0.1.0'
-  spec.authors       = ['bggd']
+  spec.authors       = ['birthggd']
 
   spec.summary       = 'opal wrapper for TIC-80'
   spec.description   = 'opal wrapper for TIC-80'
