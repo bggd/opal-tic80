@@ -26,7 +26,7 @@ class Object
 
   def font: (String text) -> void
           | (String text, Numeric x, Numeric y, ?Numeric colorkey) -> void
-          | (String text, Numeric x, Numeric y, Numeric colorkey, Numeric char_width, Numeric char_height, ?bool fixed, ?Numeric scale) -> Numeric
+          | (String text, Numeric x, Numeric y, Numeric colorkey, Numeric char_width, Numeric char_height, ?bool fixed, ?Numeric scale) -> Integer
 
   def fset: (Numeric index, Numeric flag, bool value) -> void
 
@@ -47,7 +47,7 @@ class Object
 
   def memset: (Numeric addr, Numeric val, Numeric len) -> void
 
-  def mget: (Numeric x, Numeric y) -> Numeric
+  def mget: (Numeric x, Numeric y) -> Integer
 
   def mouse: () -> Array[Numeric | bool]
 
@@ -56,21 +56,21 @@ class Object
   def music: () -> void
            | (Numeric track, ?Numeric frame, ?Numeric row, ?bool music_loop, ?bool sustain) -> void
 
-  def peek: (Numeric addr) -> Numeric
+  def peek: (Numeric addr) -> Integer
 
-  def peek4: (Numeric addr4) -> Numeric
+  def peek4: (Numeric addr4) -> Integer
 
-  def pix: (Numeric x, Numeric y) -> Numeric
+  def pix: (Numeric x, Numeric y) -> Integer
          | (Numeric x, Numeric y, Numeric color) -> void
 
-  def pmem: (Numeric index, ?Numeric val) -> Numeric
+  def pmem: (Numeric index, ?Numeric val) -> Integer
 
   def poke: (Numeric addr, Numeric val) -> void
 
   def poke4: (Numeric addr4, Numeric val) -> void
 
-  def print: (String text) -> Numeric
-           | (String text, Numeric x, Numeric y, ?Numeric color, ?bool fixed, ?Numeric scale, ?bool smallfont) -> Numeric
+  def print: (String text) -> Integer
+           | (String text, Numeric x, Numeric y, ?Numeric color, ?bool fixed, ?Numeric scale, ?bool smallfont) -> Integer
 
   def rect: (Numeric x, Numeric y, Numeric w, Numeric h, Numeric color) -> void
 
@@ -85,9 +85,9 @@ class Object
 
   def sync: (?Numeric mask, ?Numeric bank, ?bool tocart) -> void
 
-  def time: () -> Numeric
+  def time: () -> Integer
 
-  def tstamp: () -> Numeric
+  def tstamp: () -> Integer
 
   def trace: (String? msg, ?Numeric color) -> void
 
